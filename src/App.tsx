@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import type {Node} from 'react';
+import type {ReactElement} from 'react';
 import React from 'react';
 import {
   SafeAreaView,
@@ -28,7 +28,7 @@ import {
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
-const Section = ({children, title}): Node => {
+const Section = ({children, title}: any): ReactElement => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -54,7 +54,7 @@ const Section = ({children, title}): Node => {
   );
 };
 
-const App: () => Node = () => {
+const App: () => ReactElement = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
