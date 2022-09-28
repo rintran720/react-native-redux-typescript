@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,json}' --fix",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json}'"
+    "format": "prettier 'src/**/*.{js,jsx,ts,tsx,json}' --write "
   },
   "dependencies": {
     "react": "18.1.0",
