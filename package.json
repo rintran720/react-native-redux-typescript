@@ -39,7 +39,7 @@
     "preset": "react-native"
   },
   "lint-staged": {
-    "*": [
+    "src/**/*.{js,jsx,ts,tsx,json}": [
       "yarn lint",
       "yarn format"
     ]
