@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Text, View} from 'react-native';
-import {navigate} from '../../navigation/navigation';
+import {navigate} from '~/navigation/navigation';
 import styles from './styles';
 
 function HomeComponent() {
