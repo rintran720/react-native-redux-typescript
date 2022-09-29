@@ -13,6 +13,7 @@ module.exports = {
           '~/types': './src/types',
           '~/assets': './src/assets',
           '~/images': './src/assets/image',
+          '~/store': './src/store',
         },
       },
     ],
