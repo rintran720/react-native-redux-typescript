@@ -9,7 +9,6 @@
 import type {ReactElement} from 'react';
 import React from 'react';
 import {
-  SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -17,6 +16,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import {
   Colors,
@@ -62,7 +62,7 @@ const App: () => ReactElement = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaProvider>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
@@ -91,7 +91,7 @@ const App: () => ReactElement = () => {
           <LearnMoreLinks />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 
