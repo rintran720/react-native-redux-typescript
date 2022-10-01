@@ -6,7 +6,7 @@
     "isolatedModules": true,
     "jsx": "react-native",
     "lib": ["es2017"],
-    "types": ["react-native", "jest"],
+    "types": ["react-native", "jest", "node", "lodash"],
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,

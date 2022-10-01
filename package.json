@@ -11,6 +11,7 @@
     "format": "prettier 'src/**/*.{js,jsx,ts,tsx,json}' --write "
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.10",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/stack": "^6.3.1",
     "@reduxjs/toolkit": "^1.8.5",
@@ -21,7 +22,8 @@
     "react-native-screens": "^3.17.0",
     "react-native-vector-icons": "^9.2.0",
     "react-redux": "^8.0.4",
-    "redux": "^4.2.0"
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -30,6 +32,7 @@
     "@commitlint/config-conventional": "^17.1.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^29.0.3",
+    "@types/node": "^18.7.23",
     "@types/react": "^18.0.21",
     "@types/react-native": "^0.70.3",
     "@types/react-test-renderer": "^18.0.0",
