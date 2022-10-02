@@ -36,14 +36,22 @@ const persistedReducer = persistReducer<CombinedAppState, AnyAction>(
 
 export const store = configureStore({
   reducer: persistedReducer,
-  devTools: process.env.NODE_ENV !== 'production',
-  middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({
+  devTools: !!__DEV__,
+  middleware: getDefaultMiddleware => {
+    const defaultMiddlewares = getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }),
+    });
+
+    if (__DEV__) {
+      const createDebugger = require('redux-flipper').default;
+      defaultMiddlewares.push(createDebugger());
+    }
+    return defaultMiddlewares;
+  },
 });
+
 export const persistor = persistStore(store);
 
 export type RootState = ReturnType<typeof store.getState>;
