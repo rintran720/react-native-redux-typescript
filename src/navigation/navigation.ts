@@ -1,6 +1,6 @@
 // RootNavigation.js
-import {createNavigationContainerRef} from '@react-navigation/native';
-import {AppRootParamsList} from './types';
+import { createNavigationContainerRef } from '@react-navigation/native';
+import { AppRootParamsList } from './types';
 
 export const navigationRef = createNavigationContainerRef<AppRootParamsList>();
 

@@ -1,10 +1,10 @@
-import type {ReactElement} from 'react';
+import type { ReactElement } from 'react';
 import React from 'react';
-import {Provider} from 'react-redux';
-import {PersistGate} from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
 import RootNavigation from '~/navigation/RootNavigation';
-import {persistor, store} from '~/store/config';
+import { persistor, store } from '~/store/config';
 
 const App: () => ReactElement = () => {
   return (

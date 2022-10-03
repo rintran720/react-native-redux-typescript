@@ -1,8 +1,8 @@
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import MainStack from './MainStack';
-import {navigationRef} from './navigation';
+import { navigationRef } from './navigation';
 
 function RootNavigation() {
   return (
