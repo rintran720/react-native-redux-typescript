@@ -10,7 +10,7 @@ function HomeComponent() {
   const themedStyles = styles(theme);
   return (
     <View style={themedStyles.container}>
-      <Text>Click to navigation other page</Text>
+      <Text style={themedStyles.applyFont}>Click to navigation other page</Text>
       <Button
         title="Go to Profile"
         onPress={() => navigate('Profile', null)}
