@@ -6,13 +6,15 @@
     "isolatedModules": true,
     "jsx": "react-native",
     "lib": ["es2017"],
-    "types": ["react-native", "jest", "node", "lodash"],
+    "types": ["react-native", "jest", "node"],
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
+      "~/components/*": ["src/modules/common/components/*"],
+      "~/containers/*": ["src/modules/common/containers/*"],
       "~/*": ["src/*"]
     }
   },
