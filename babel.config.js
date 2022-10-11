@@ -15,6 +15,7 @@ module.exports = {
           '~/images': './src/assets/image',
           '~/store': './src/store',
           '~/constants': './src/constants',
+          '~/theme': './src/theme',
           '~/components': './src/modules/common/components',
           '~/containers': './src/modules/common/containers',
           '~/modules': './src/modules',

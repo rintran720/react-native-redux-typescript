@@ -1,15 +1,18 @@
 import { ThemeOptions } from '@rneui/themed';
 import { StyleSheet } from 'react-native';
-import fonts from '~/constants/fonts.const';
 
-const styles = (theme: ThemeOptions) =>
+const styles = ({ colors, fontSizes, spacing }: ThemeOptions) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: theme.colors.background,
+      backgroundColor: colors.background,
+      padding: spacing.lg,
     },
     applyFont: {
-      fontFamily: fonts.fontFamily,
+      // fontFamily: fontFamilies.body,
+      fontStyle: 'italic',
+      fontWeight: '700',
+      fontSize: fontSizes.xl,
     },
   });
 

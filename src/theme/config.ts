@@ -1,17 +1,16 @@
-import { createTheme } from '@rneui/themed';
-
-const colors = {
-  primary: '#F39A9D',
-  secondary: '#6DB1BF',
-  background: '#F1E9DA',
-  error: '#F21B3F',
-  success: '#29BF12',
-  warning: '#FF9914',
-};
+import { createTheme, TextProps } from '@rneui/themed';
+import { colors } from '~/constants/color.const';
+import { fontFamilies, fontSizes } from '../constants/font.const';
+import './config.d';
 
 const theme = createTheme({
   lightColors: { ...colors },
   darkColors: { ...colors },
+  fontFamilies,
+  fontSizes,
+  Text: ({ style }: TextProps) => ({
+    style: { fontFamily: fontFamilies.body, ...style },
+  }),
 });
 
 export default theme;

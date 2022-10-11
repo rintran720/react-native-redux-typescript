@@ -1,7 +1,7 @@
 import { useTheme } from '@rneui/themed';
 import React from 'react';
-import { Text, View } from 'react-native';
-import Button from '~/components/Button';
+import { View } from 'react-native';
+import { Button, Text } from '~/components/core';
 import { navigate } from '~/navigation/navigation';
 import styles from './styles';
 
