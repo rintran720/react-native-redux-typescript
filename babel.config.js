@@ -16,6 +16,7 @@ module.exports = {
           '~/store': './src/store',
           '~/constants': './src/constants',
           '~/theme': './src/theme',
+          '~/languages': './src/languages',
           '~/components': './src/modules/common/components',
           '~/containers': './src/modules/common/containers',
           '~/modules': './src/modules',
