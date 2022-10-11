@@ -17,6 +17,8 @@ module.exports = {
           '~/constants': './src/constants',
           '~/theme': './src/theme',
           '~/languages': './src/languages',
+          '~/api': './src/api',
+          '~/utils': './src/utils',
           '~/components': './src/modules/common/components',
           '~/containers': './src/modules/common/containers',
           '~/modules': './src/modules',

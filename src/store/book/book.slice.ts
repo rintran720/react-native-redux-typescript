@@ -12,7 +12,12 @@ const bookSlice = createSlice<BookState, SliceCaseReducers<BookState>, string>({
     newPost: (state, action: { payload: Book; type: string }) => {
       state.list.push(action.payload);
     },
+    setBooks: (state, action: { payload: Book[]; type: string }) => {
+      state.list = [...action.payload];
+    },
   },
 });
 
+export const bookActions = bookSlice.actions;
+export const bookReducers = bookSlice.reducer;
 export default bookSlice;

@@ -1,3 +1,9 @@
+export type APIResponse<T> = {
+  loading: boolean;
+  error: string | null;
+  data: T | null;
+};
+
 export interface Book {
   id: string;
   name: string;

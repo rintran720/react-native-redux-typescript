@@ -18,6 +18,7 @@
     "@reduxjs/toolkit": "^1.8.5",
     "@rneui/base": "^4.0.0-rc.6",
     "@rneui/themed": "^4.0.0-rc.6",
+    "axios": "^0.27.2",
     "i18next": "^21.10.0",
     "lodash": "^4.17.21",
     "react": "18.1.0",

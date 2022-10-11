@@ -14,10 +14,10 @@ import {
 } from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import { BookState } from '../types';
-import bookSlice from './book/book.slice';
+import { bookReducers } from './book/book.slice';
 
 const rootReducer = combineReducers({
-  book: bookSlice.reducer,
+  book: bookReducers,
 });
 
 const persistConfig = {
