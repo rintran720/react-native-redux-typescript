@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios --simulator='iPhone 13 Pro'",
     "start": "react-native start",
+    "link": "npx react-native-asset",
     "test": "jest",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,json}' --fix",
     "format": "prettier 'src/**/*.{js,jsx,ts,tsx,json}' --write "

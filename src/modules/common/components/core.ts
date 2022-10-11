@@ -3,7 +3,6 @@ import {
   Avatar,
   Badge,
   BottomSheet,
-  Button,
   ButtonGroup,
   Card,
   CheckBox,
@@ -26,14 +25,14 @@ import {
   Tile,
   Tooltip,
 } from '@rneui/themed';
-import { Text } from './Text';
+import { Button } from './Button';
+import { Text } from './SanFranciscoText';
 
 export {
   AirbnbRating,
   Avatar,
   Badge,
   BottomSheet,
-  Button,
   ButtonGroup,
   Card,
   CheckBox,
@@ -53,7 +52,8 @@ export {
   Switch,
   Tab,
   TabView,
-  Text,
   Tile,
   Tooltip,
+  Text,
+  Button,
 };
