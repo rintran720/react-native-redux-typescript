@@ -129,17 +129,25 @@ def reactNativeArchitectures() {
     return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
 }
 
+def APP_ID = System.getenv("APP_ID") ?: "com.drjohnsmith.aplication"
+def BUILD_NUMBER = System.getenv("BUILD_NUMBER") ?: "1"
+def BUILD_NAME = System.getenv("BUILD_NAME") ?: "1.0.local"
+def MYAPP_UPLOAD_STORE_FILE = System.getenv("MYAPP_UPLOAD_STORE_FILE") ?: ""
+def MYAPP_UPLOAD_STORE_PASSWORD = System.getenv("MYAPP_UPLOAD_STORE_PASSWORD") ?: ""
+def MYAPP_UPLOAD_KEY_ALIAS = System.getenv("MYAPP_UPLOAD_KEY_ALIAS") ?: ""
+def MYAPP_UPLOAD_KEY_PASSWORD = System.getenv("MYAPP_UPLOAD_KEY_PASSWORD") ?: ""
+
 android {
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.reactnativereduxtypescript"
+        applicationId APP_ID
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode  Integer.parseInt(BUILD_NUMBER)
+        versionName BUILD_NAME
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         if (isNewArchitectureEnabled()) {
@@ -218,12 +226,10 @@ android {
             keyPassword 'android'
         }
         release {
-            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
-                storeFile file(MYAPP_UPLOAD_STORE_FILE)
-                storePassword MYAPP_UPLOAD_STORE_PASSWORD
-                keyAlias MYAPP_UPLOAD_KEY_ALIAS
-                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
-            }
+            storeFile file(MYAPP_UPLOAD_STORE_FILE)
+            storePassword MYAPP_UPLOAD_STORE_PASSWORD
+            keyAlias MYAPP_UPLOAD_KEY_ALIAS
+            keyPassword MYAPP_UPLOAD_KEY_PASSWORD
         }
     }
     buildTypes {

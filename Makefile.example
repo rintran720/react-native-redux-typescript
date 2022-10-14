@@ -1,0 +1,2 @@
+build-android:
+	BUILD_NAME='1.1' BUILD_NUMBER='1' APP_ID='com.drjohnsmith.your_app_id' MYAPP_UPLOAD_STORE_FILE='release-you-app.keystore' MYAPP_UPLOAD_KEY_ALIAS='key-alias' MYAPP_UPLOAD_STORE_PASSWORD='' MYAPP_UPLOAD_KEY_PASSWORD='' sh ./devops/android/builder.sh
