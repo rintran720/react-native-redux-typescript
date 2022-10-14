@@ -1,2 +1,25 @@
 build-android:
-	BUILD_NAME='1.1' BUILD_NUMBER='1' ANDROID_APP_ID='com.drjohnsmith.your_app_id' MYAPP_UPLOAD_STORE_FILE='release-you-app.keystore' MYAPP_UPLOAD_KEY_ALIAS='key-alias' MYAPP_UPLOAD_STORE_PASSWORD='' MYAPP_UPLOAD_KEY_PASSWORD='' sh ./devops/android/builder.sh
+	BUILD_NAME='1.0.0' \
+	BUILD_NUMBER='1' \
+	ANDROID_APP_ID='com.drjohnsmith.your_app_id' \
+	MYAPP_UPLOAD_STORE_FILE='example.keystore' \
+	MYAPP_UPLOAD_KEY_ALIAS='key-alias' \
+	MYAPP_UPLOAD_STORE_PASSWORD='<PASSWORD>' \
+	MYAPP_UPLOAD_KEY_PASSWORD='<PASSWORD>' \
+	sh ./devops/android/builder.sh
+
+prebuild-ios:
+	IOS_CERTIFICATE='cert-example.p12' \
+	IOS_CERTIFICATE_KEY='<PASSWORD>' \
+	IOS_PROVISION_PROFILE='profile-example.mobileprovision' \
+	sh ./devops/ios/keychain.sh
+
+build-ios:
+	PROJECT_NAME='NoteTaker' \
+	IOS_APP_ID='com.drjohnsmith.app.awesome' \
+	BUILD_NAME='1.0.0 '\
+	BUILD_NUMBER='1' \
+	OS_SCHEME='local' \
+	IOS_CONFIGURATION='RELEASE' \
+	IOS_EXPORT_OPTIONS_PLIST='exportOptions-dev-example.plist' \
+	sh ./devops/ios/builder.sh

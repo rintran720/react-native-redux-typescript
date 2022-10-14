@@ -66,3 +66,9 @@ buck-out/
 
 # DevOps
 Makefile
+devops/ios/certs/*.p12
+!devops/ios/certs/cert-example.p12
+devops/ios/exportOptions/*.p12
+!devops/ios/exportOptions/exportOptions-dev-example.p12
+devops/ios/profile/*.mobileprovision
+!devops/ios/profile/profile-example.mobileprovision
