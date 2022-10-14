@@ -129,7 +129,7 @@ def reactNativeArchitectures() {
     return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
 }
 
-def APP_ID = System.getenv("APP_ID") ?: "com.drjohnsmith.aplication"
+def APP_ID = System.getenv("ANDROID_APP_ID") ?: "com.drjohnsmith.aplication"
 def BUILD_NUMBER = System.getenv("BUILD_NUMBER") ?: "1"
 def BUILD_NAME = System.getenv("BUILD_NAME") ?: "1.0.local"
 def MYAPP_UPLOAD_STORE_FILE = System.getenv("MYAPP_UPLOAD_STORE_FILE") ?: ""
