@@ -72,3 +72,7 @@ devops/ios/exportOptions/*.p12
 !devops/ios/exportOptions/exportOptions-dev-example.p12
 devops/ios/profile/*.mobileprovision
 !devops/ios/profile/profile-example.mobileprovision
+
+# Testing
+coverage
+.jest
