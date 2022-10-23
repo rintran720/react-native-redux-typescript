@@ -8,9 +8,11 @@ const theme = createTheme({
   darkColors: { ...colors },
   fontFamilies,
   fontSizes,
-  Text: ({ style }: TextProps) => ({
-    style: { fontFamily: fontFamilies.body, ...style },
-  }),
+  components: {
+    Text: ({ style }: TextProps) => ({
+      style: { fontFamily: fontFamilies.body, ...(style as object) },
+    }),
+  },
 });
 
 export default theme;

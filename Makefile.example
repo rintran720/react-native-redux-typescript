@@ -2,10 +2,10 @@ build-android:
 	BUILD_NAME='1.0.0' \
 	BUILD_NUMBER='1' \
 	ANDROID_APP_ID='com.drjohnsmith.your_app_id' \
-	MYAPP_UPLOAD_STORE_FILE='example.keystore' \
-	MYAPP_UPLOAD_KEY_ALIAS='key-alias' \
-	MYAPP_UPLOAD_STORE_PASSWORD='<PASSWORD>' \
-	MYAPP_UPLOAD_KEY_PASSWORD='<PASSWORD>' \
+	ANDROID_STORE_FILE='example.keystore' \
+	ANDROID_KEY_ALIAS='key-alias' \
+	ANDROID_STORE_PASSWORD='<PASSWORD>' \
+	ANDROID_KEY_PASSWORD='<PASSWORD>' \
 	sh ./devops/android/builder.sh
 
 prebuild-ios:
