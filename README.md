@@ -17,7 +17,7 @@ This source has been created for a dynamic React project. We used some similar t
 
 - Recommended node 14 or later.
 - Clone this repo using
-  `git clone https://github.com/react-boilerplate/react-boilerplate.git <YOUR_PROJECT_NAME>`
+  `git clone https://github.com/rintran720/react-native-redux-typescript.git <YOUR_PROJECT_NAME>`
 - Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`
 - Run `npm install` or `yarn` in order to install dependencies and clean the git repo.
 - At this point you can run `npm run ios` or `npm run android` to see the example app at device.
