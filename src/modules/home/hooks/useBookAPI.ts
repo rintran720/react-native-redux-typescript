@@ -13,19 +13,23 @@ const bookAPI = {
     });
     const dispatch = useAppDispatch();
 
-    const call = useCallback(() => {
-      setRes({ loading: true, error: null, data: null });
-      Axios.get<Book[]>('book')
-        .then((response) => {
-          if (response.data) {
-            setRes({ loading: false, data: response.data, error: null });
-            dispatch(bookActions.setBooks(response.data));
-          }
-        })
-        .catch((error) => setRes({ loading: false, data: null, error }));
-    }, [dispatch]);
+    const call = useCallback(
+      (callback?: Function) => {
+        setRes({ loading: true, error: null, data: null });
+        Axios.get<Book[]>('book')
+          .then((response) => {
+            if (response.data) {
+              setRes({ loading: false, data: response.data, error: null });
+              dispatch(bookActions.setBooks(response.data));
+              callback?.();
+            }
+          })
+          .catch((error) => setRes({ loading: false, data: null, error }));
+      },
+      [dispatch],
+    );
 
-    return [call, res] as const;
+    return [call, res.data, res.loading, res.error] as const;
   },
 };
 
