@@ -28,7 +28,7 @@ The application will be implemented in `./src` folder
 
 ## 1. App.tsx
 
-This file is master component of whole project. You should inject logic providers in here.
+This file is master component of whole project. You should add all global providers in here.
 
 ## 2. Assets
 
@@ -36,8 +36,8 @@ All assets will be saved at `./src/assets`. After add new asset to project, run 
 
 ## 3. Navigation
 
-To control screen views and register screens in you app. Update `RootNavigation` if you want to change the root nativation of whole application.
-Please check document at [React Navigation](https://reactnavigation.org/). Recommended add UI provider in here.
+To control screen views and register screens in you app. Update `RootNavigation` if you want to change the root navigation of whole application.
+Please check document at [React Navigation](https://reactnavigation.org/).
 
 ## 4. Types
 
