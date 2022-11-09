@@ -14,7 +14,7 @@ const bookAPI = {
 		const dispatch = useAppDispatch();
 
 		const call = useCallback(
-			(callback?: Function) => {
+			(callback?: () => void) => {
 				setRes({ loading: true, error: null, data: null });
 				Axios.get<Book[]>('book')
 					.then((response) => {
