@@ -1,6 +1,6 @@
-import { useTheme } from '@rneui/themed';
 import React from 'react';
 import { Text, View } from 'react-native';
+import useTheme from '~/theme/useTheme';
 import styles from './styles';
 
 function SettingsComponent() {

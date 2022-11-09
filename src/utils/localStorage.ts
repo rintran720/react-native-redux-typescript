@@ -8,3 +8,5 @@ export async function getAccessToken() {
     return null;
   }
 }
+
+export const Storage = AsyncStorage;

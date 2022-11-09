@@ -1,11 +1,11 @@
-import { createTheme, TextProps } from '@rneui/themed';
-import { colors } from '~/constants/color.const';
+import { createTheme, CreateThemeOptions, TextProps } from '@rneui/themed';
+import { colors } from '~/constants/colors.const';
 import { fontFamilies, fontSizes } from '../constants/font.const';
 import './config.d';
 
-const theme = createTheme({
-  lightColors: { ...colors },
-  darkColors: { ...colors },
+const theme: CreateThemeOptions = createTheme({
+  lightColors: { ...colors.light },
+  darkColors: { ...colors.dark },
   fontFamilies,
   fontSizes,
   components: {

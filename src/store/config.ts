@@ -1,4 +1,3 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { AnyAction, CombinedState, combineReducers } from 'redux';
@@ -13,7 +12,9 @@ import {
   REHYDRATE,
 } from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
-import { BookState } from '../types';
+import { BookState } from '~/types';
+import { Storage } from '~/utils/localStorage';
+import { isProduction } from '../utils/env';
 import { bookReducers } from './book/book.slice';
 
 const rootReducer = combineReducers({
@@ -23,7 +24,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
   version: 1,
   key: 'root',
-  storage: AsyncStorage,
+  storage: Storage,
   stateReconciler: autoMergeLevel2,
 };
 
@@ -36,7 +37,7 @@ const persistedReducer = persistReducer<CombinedAppState, AnyAction>(
 
 export const store = configureStore({
   reducer: persistedReducer,
-  devTools: !!__DEV__,
+  devTools: !isProduction(),
   middleware: (getDefaultMiddleware) => {
     const defaultMiddlewares = getDefaultMiddleware({
       serializableCheck: {
@@ -44,7 +45,7 @@ export const store = configureStore({
       },
     });
 
-    if (__DEV__) {
+    if (!isProduction()) {
       const createDebugger = require('redux-flipper').default;
       defaultMiddlewares.push(createDebugger());
     }

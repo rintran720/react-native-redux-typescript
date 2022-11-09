@@ -1,8 +1,8 @@
-import { useTheme } from '@rneui/themed';
 import React from 'react';
 import { View } from 'react-native';
 import { Button, Text } from '~/components/core';
 import { navigate } from '~/navigation/navigation';
+import useTheme from '~/theme/useTheme';
 import styles from './styles';
 
 function HomeComponent() {

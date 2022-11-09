@@ -1,12 +1,12 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { ThemeProvider } from '@rneui/themed';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 // import '~/languages/i18n';
 import theme from '~/theme/config';
+import ThemeProvider from '~/theme/ThemeProvider';
 import MainStack from './MainStack';
 import { navigationRef } from './navigation';
-
+console.log(theme);
 function RootNavigation() {
   return (
     <ThemeProvider theme={theme}>
