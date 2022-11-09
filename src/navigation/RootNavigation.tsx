@@ -8,15 +8,15 @@ import MainStack from './MainStack';
 import { navigationRef } from './navigation';
 console.log(theme);
 function RootNavigation() {
-  return (
-    <ThemeProvider theme={theme}>
-      <NavigationContainer ref={navigationRef}>
-        <SafeAreaProvider>
-          <MainStack />
-        </SafeAreaProvider>
-      </NavigationContainer>
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider theme={theme}>
+			<NavigationContainer ref={navigationRef}>
+				<SafeAreaProvider>
+					<MainStack />
+				</SafeAreaProvider>
+			</NavigationContainer>
+		</ThemeProvider>
+	);
 }
 
 export default RootNavigation;

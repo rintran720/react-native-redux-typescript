@@ -7,13 +7,13 @@ import RootNavigation from '~/navigation/RootNavigation';
 import { persistor, store } from '~/store/config';
 
 const App: () => ReactElement = () => {
-  return (
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
-        <RootNavigation />
-      </PersistGate>
-    </Provider>
-  );
+	return (
+		<Provider store={store}>
+			<PersistGate persistor={persistor}>
+				<RootNavigation />
+			</PersistGate>
+		</Provider>
+	);
 };
 
 export default App;

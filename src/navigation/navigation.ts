@@ -5,7 +5,7 @@ import { AppRootParamsList } from './types';
 export const navigationRef = createNavigationContainerRef<AppRootParamsList>();
 
 export function navigate(name: keyof AppRootParamsList, params: any) {
-  if (navigationRef.isReady()) {
-    navigationRef.navigate(name, params);
-  }
+	if (navigationRef.isReady()) {
+		navigationRef.navigate(name, params);
+	}
 }

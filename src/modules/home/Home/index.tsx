@@ -5,16 +5,16 @@ import bookAPI from '../hooks/useBookAPI';
 import HomeComponent from './component';
 
 function Home() {
-  const [getBooks, _books] = bookAPI.useGetBook();
-  const books = useAppSelector(listBookSelector);
+	const [getBooks, _books] = bookAPI.useGetBook();
+	const books = useAppSelector(listBookSelector);
 
-  useEffect(() => {
-    getBooks();
-  }, [getBooks]);
+	useEffect(() => {
+		getBooks();
+	}, [getBooks]);
 
-  console.log('render', _books, books);
+	console.log('render', _books, books);
 
-  return <HomeComponent />;
+	return <HomeComponent />;
 }
 
 export default Home;

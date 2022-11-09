@@ -1,3 +1,3 @@
 export function isProduction() {
-  return !__DEV__;
+	return !__DEV__;
 }
