@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useMemo } from 'react';
 import getBooksAPI from '~/api/manual/book/getBooksAPI';
 import { Pet, PetService } from '~/api/swagger';
 import useAPI from '~/hooks/useAPI';
+import useAxiosAPI from '~/hooks/useAxiosAPI';
 import { Book } from '~/types';
-import useAxiosAPI from '../../common/hooks/useAxiosAPI';
 import HomeComponent from './component';
 
 function Home() {
