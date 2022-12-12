@@ -4,13 +4,13 @@ import useTheme from '~/theme/useTheme';
 import styles from './styles';
 
 function SettingsComponent() {
-	const { theme } = useTheme();
-	const themedStyles = styles(theme);
-	return (
-		<View style={themedStyles.container}>
-			<Text>Settings</Text>
-		</View>
-	);
+  const { theme } = useTheme();
+  const themedStyles = styles(theme);
+  return (
+    <View style={themedStyles.container}>
+      <Text>Settings</Text>
+    </View>
+  );
 }
 
 export default SettingsComponent;
